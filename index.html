@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Structure</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #2a2a72, #009ffd, #00c9ff, #92fe9d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar styles */
+    .navbar {
+      background-color: #008080;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      animation: slideDown 1s ease forwards;
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    @keyframes slideDown {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: white;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .menu a:hover::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: white;
+      bottom: -4px;
+      left: 0;
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 60px);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeInScale 1s ease 1s forwards;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease 1.8s forwards;
+    }
+
+    @keyframes fadeInScale {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">ASK</div>
+    <div class="menu">
+      <a href="#">mili</a>
+      <a href="#">MILI▼</a>
+      <a href="#">MILI ▼</a>
+      <a href="#">MILI ▼</a>
+      <a href="#">MILI ▼</a>
+      <a href="#">MILI ▼</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>MILI</h1>
+    <p>KKKK</p>
+  </div>
+
+</body>
+</html>
